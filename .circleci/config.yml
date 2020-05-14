@@ -108,4 +108,4 @@ workflows:
             - apply
       - destroy:
           requires:
-            - apply
+            - hold
