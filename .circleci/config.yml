@@ -102,6 +102,10 @@ workflows:
       - apply:
           requires:
             - plan
+      - hold:
+          type: approval
+          requires:
+            - apply
       - destroy:
           requires:
             - apply
