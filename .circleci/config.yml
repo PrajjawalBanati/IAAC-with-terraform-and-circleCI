@@ -48,12 +48,12 @@ jobs:
             cd ~/project/
             terraform init -backend-config="token=${TF_API_TOKEN}"
             terraform fmt
-      #- *save_repo
+      - *save_repo
 
   plan:
     <<: *default_config
     steps:
-      #- *restore_repo
+      - *restore_repo
       - *set_terraform_environment
       - *terraform_init
       - run:
@@ -65,7 +65,7 @@ jobs:
   apply:
     <<: *default_config
     steps:
-      #- *restore_repo
+      - *restore_repo
       - *set_terraform_environment
       - *terraform_init
       - run:
@@ -78,7 +78,7 @@ jobs:
   destroy:
     <<: *default_config
     steps:
-      #- *restore_repo
+      - *restore_repo
       - *set_terraform_environment
       - *terraform_init
       - run:
