@@ -19,3 +19,4 @@ variable "instance_image" {
 variable "instance_type" {
     type=string
 }
+
