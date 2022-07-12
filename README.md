@@ -408,45 +408,45 @@
 
 - In the CircleCI web UI, add a new project.
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/1-Add-Your-Project.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/1-Add-Your-Project.png)
 
 - Search for the repo you pushed and choose Set Up Project. Choose "Hello World" as the language and ignore the sample `.yml` file generated.
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/2-Setup-Project.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/2-Setup-Project.png)
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/3-Start-Building.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/3-Start-Building.png)
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/4-Add-Manually.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/4-Add-Manually.png)
 
 - Choose "Start Building" and you should be presented with a popup confirming you have created `config.yml` file.
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/Start-Building.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/Start-Building.png)
 
 - It will fail because the Environment Variables are not set and are necessary to run the correct jobs.
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/Failed.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/Failed.png)
 
 - In the right hand corner of this page, find the gear icon to be taken to the project settings and choose environment variables from Build Settings.
 
 - The four environment variables for this project are `APP_BUCKET`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `TF_API_TOKEN`. These are variables that CircleCI uses to inject data into the `.config.yml` file.
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/7-Environment%20Variables.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/7-Environment%20Variables.png)
 
 - Commit a small change in GitHub this will push a change and thus you pipeline will run. So here are the small glimpses of all the stages which ran successfully.
 
 - Running Pipeline
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/running.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/running.png)
 - Build Successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/buildsucces.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/buildsucces.png)
 - Plan Successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/plansuccessfull.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/plansuccessfull.png)
 - Apply successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/applysuccessfu.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/applysuccessfu.png)
 - Destroy successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/destroy.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/destroy.png)
 - Pipeline Successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/pipeline%20successfull.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/pipeline%20successfull.png)
 
 ## Hold Stage
 
@@ -473,18 +473,18 @@
 
 - Commit this code snippet to github and again your pipeline will start. This time after `plan`,`apply`, it will remain on hold and will ask for approval from the user. 
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/running%20again.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/running%20again.png)
 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/on-hold.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/on-hold.png)
 
 - Click on the tab and then `Approve` the destruction. And so it will run the destruction step after your approval. And so will pipeline will run successfully.
 - On hold
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/approve.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/approve.png)
 - Approve Hold
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/approval-success.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/approval-success.png)
 - Running Destroy after Approving 
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/running-destroy.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/running-destroy.png)
 - Pipeline Successfull
-  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Automating_Terraform/Outputs/approval-success.png)
+  ![](https://github.com/PrajjawalBanati/learn-terraform-circleci/blob/master/Outputs/approval-success.png)
 
 So It was all about automating terraform with CircleCI.
